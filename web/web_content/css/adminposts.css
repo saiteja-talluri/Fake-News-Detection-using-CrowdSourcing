@@ -1,0 +1,101 @@
+@import url("posts.css");
+.stat-row{
+	display: "inline-flex";
+	padding: 1%;
+	
+}
+
+.Applications{
+	display: none;
+}
+
+.VerificationPosts{
+	
+}
+
+.stat-img{
+	max-height: 50px;
+	max-width: 50px;
+	margin: 2%;
+}
+.stat-total{
+	margin: 2%;
+	padding: 10px;
+}
+.stat-upvote{
+	margin: 2%;
+	padding: 10px;
+}
+.stat-downvote{
+	margin: 2%;
+	padding: 10px;
+}
+.stat-text {
+    /* margin-top: 10%; */
+    display:block;
+    font-weight: 600;
+    padding: 5%;
+    font-size: 100%;
+    margin: auto;
+}
+
+.stat-ans {
+    padding: 3%;
+    /* margin: auto; */
+    display: inline;
+    align-self: center;
+    font-size: 100%;
+}
+
+.fixed{
+    position: fixed;
+}
+.Accept_btn{
+	/* margin-left:3%; */
+	margin-bottom:2%;
+	/* position:absolute;
+	bottom:0;
+	left: 15.5vw; */
+	padding: 2%;
+	max-width: 200px;
+	width: 10vw;
+}
+
+.Reject_btn{
+	margin-left:3%;
+	margin-right:3%;
+	margin-bottom:2%;
+	/* position:absolute;
+	right: 0;
+	bottom:0; */
+	max-width: 200px;
+	width: 10vw;
+}
+
+.View_btn{
+	margin-left:3%;
+	margin-right:3%;
+	margin-bottom:2%;
+	/* position:absolute;
+	right: 0;
+	bottom:0; */
+	max-width: 200px;
+	width: 10vw;
+}
+
+.View_responses_btn{
+	margin-left:3%;
+	margin-right:3%;
+	margin-bottom:2%;
+	/* position:absolute;
+	right: 0;
+	bottom:0; */
+	max-width: 200px;
+	width: 10vw;
+}
+.stat-con {
+    padding: 10%;
+    
+    font-size: 100%;
+    margin : 0;
+}

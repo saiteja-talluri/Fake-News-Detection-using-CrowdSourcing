@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Posts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/posts.css">
+  <link rel="stylesheet" href="./css/adminposts.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="./js/sendpostadmin.js"></script>
+  <script src="./js/admin_home.js"></script>
+  <script src="./js/volunteer_app.js"></script>
+  
+</head>
+
+<body>
+  <!-- Grey with black text -->
+  <!-- Navigation Bar -->
+  <nav class="navbar  fixed-top navbar-expand-lg navbar-light Mynav">
+    <!-- <a class="navbar-brand" href="#gotoprofile">Username</a> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item " style="width: 10vw">
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+          <!-- <button class="Mybtn Mynavbtn" type="button"> Username </button> -->
+        </li>
+        <li class="nav-item ">
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+          <button class="Mybtn Mynavbtn" type="button" id="Home_button"> Home </button>
+        </li>
+
+
+        <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li> -->
+        <!-- <li class="nav-item ">
+                        <button class = "Mybtn Mynavbtn" type="button" > Volunteer </button>
+                    </li>
+                    <li class="nav-item ">
+                        <button class = "Mybtn Mynavbtn" type="button" > Logout </button>
+                    </li> -->
+      </ul>
+      <span class="Mynavend">
+        <button class="Mybtn Mynavbtn" type="button" id="Editor_button"> Create Posts </button>
+      </span>
+      <span class="Mynavend">
+        <button class="Mybtn Mynavbtn" type="button" id="Applications-btn"> Applications </button>
+      </span>
+     <!--  <span class="Mynavend">
+        <button class="Mybtn Mynavbtn" type="button" id="Volunteers-btn"> Volunteers </button>
+      </span>  -->
+      <span class="Mynavend">
+        <button class="Mybtn Mynavbtn" type="button" id="Logout-btn"> Logout </button>
+      </span>
+      <!-- <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
+                    </form> -->
+    </div>
+  </nav>
+  
+  <div class="modal fade" id="responses_comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Comments</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <div class="row justify-content-center">
+            <div class="col-sm-9">
+              <input id="searchbox" class="form-control form-control-sm form-control-borderless" type="search" onkeyup="myFunction()"
+                placeholder="Search topics or keywords">
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-sm btn-success" type="submit">Search</button>
+            </div>
+          </div> -->
+          <!--end of col-->
+          <div>
+            <ul class="list-group" id="responses_comment_list">
+
+             
+            </ul>
+
+            <!-- <label><input type="checkbox" name="type" value="1111" /> fafa </label> -->
+          </div>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- users Posts -->
+  <div class="container-fluid UserPosts VerificationPosts" id="VerificationPosts">
+    <div class="row Mypost-row" data-value="1">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-11 Mypost-main">
+        <div class="row Mypost-submain">
+          <div class="row stat-row">
+            <img class="stat-img" alt="responses-icon" src="./images/response.png">
+            <div class="stat-total">
+              50
+            </div>
+            <img class="stat-img" alt="correct-icon" src="./images/correct.png">
+            <div class="stat-upvote">
+              35
+            </div>
+            <img class="stat-img" alt="correct-icon" src="./images/incorrect.png">
+            <div class="stat-downvote">
+              25
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-lg-5 ">
+              <div class="Mypost-image">
+                <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="Mypost-title">
+                We made it Check the first post ever created !!
+              </div>
+              <div class="Mypost-body">
+                Material is an adaptable system of guidelines, components,
+                and tools that support the best practices of user interface design.
+                Backed by open-source code, Material streamlines collaboration between
+                designers and developers, and helps teams quickly build beautiful products.
+              </div>
+            </div>
+          </div>
+          <div class="row User-Option-row">
+            <button  class="Mybtn Accept_btn" type="button"> Approve </button>
+            <button  class="Mybtn Reject_btn" type="button"> Reject </button>
+            <button  class="Mybtn View_responses_btn" type="button"> View Responses
+            </button>
+            <button onclick="view_post()" class="Mybtn View_btn" type="button"> View Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row Mypost-row" data-value="1">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-9 ">
+        <div class="row Mypost-main">
+          <div class="row Mypost-submain">
+            <div class="col-lg-5 ">
+              <div class="Mypost-image">
+                <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="Mypost-title">
+                We made it Check the first post ever created !!
+              </div>
+              <div class="Mypost-body">
+                Material is an adaptable system of guidelines, components,
+                and tools that support the best practices of user interface design.
+                Backed by open-source code, Material streamlines collaboration between
+                designers and developers, and helps teams quickly build beautiful products.
+              </div>
+            </div>
+          </div>
+          <div class="row User-Option-row">
+            <button onclick="approve_post()" class="Mybtn Accept_btn" type="button"> Approve </button>
+            <button onclick="reject_post()" class="Mybtn Reject_btn" type="button"> Reject </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-2 ">
+        <div class="row Mypost-row ">
+          <div class="container Mypost-main">
+            <div class="row  stat-text">
+              Total Responses
+            </div>
+            <div class=" row stat-ans">
+              50
+            </div>
+            <div class="row stat-text">
+              Positive
+            </div>
+            <div class="row stat-ans">
+              35
+            </div>
+            <div class="row stat-text">
+              Negative
+            </div>
+            <div class="row stat-ans">
+              15
+            </div>
+            <button onclick="view_responses_post()" class=" Mybtn " type="button"> View Responses </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row Mypost-row" data-value="1">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-9 ">
+        <div class="row Mypost-main">
+          <div class="row Mypost-submain">
+            <div class="col-lg-5 ">
+              <div class="Mypost-image">
+                <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="Mypost-title">
+                We made it Check the first post ever created !!
+              </div>
+              <div class="Mypost-body">
+                Material is an adaptable system of guidelines, components,
+                and tools that support the best practices of user interface design.
+                Backed by open-source code, Material streamlines collaboration between
+                designers and developers, and helps teams quickly build beautiful products.
+              </div>
+            </div>
+          </div>
+          <div class="row User-Option-row">
+            <button  class="Mybtn Accept_btn" type="button"> Approve </button>
+            <button  class="Mybtn Reject_btn" type="button"> Reject </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-2 ">
+        <div class="row Mypost-row ">
+          <div class="container Mypost-main">
+            <div class="row  stat-text">
+              Total Responses
+            </div>
+            <div class=" row stat-ans">
+              50
+            </div>
+            <div class="row stat-text">
+              Positive
+            </div>
+            <div class="row stat-ans">
+              35
+            </div>
+            <div class="row stat-text">
+              Negative
+            </div>
+            <div class="row stat-ans">
+              15
+            </div>
+            <button onclick="view_responses_post()" class=" Mybtn " type="button"> View Responses </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row Mypost-row">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-9 ">
+        <div class="row Mypost-main">
+          <div class="col-lg-5 ">
+            <div class="Mypost-image">
+              <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="Mypost-title">
+              We made it Check the first post ever created !!
+            </div>
+            <div class="Mypost-body">
+              Material is an adaptable system of guidelines, components,
+              and tools that support the best practices of user interface design.
+              Backed by open-source code, Material streamlines collaboration between
+              designers and developers, and helps teams quickly build beautiful products.
+            </div>
+            <div class="row " style="height:20%">
+              <div class="col-lg-2"> </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn" type="button" id="Post-Approve"> Approve </button>
+              </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn " type="button" id="Post-Reject"> Reject </button>
+              </div>
+              <div class="col-lg-2">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-lg-2">
+        <div class="row Mypost-main stat-con">
+          <div class="container">
+            <div class="row  stat-text">
+              Total Responses
+            </div>
+            <div class=" row stat-ans">
+              50
+            </div>
+            <div class="row stat-text">
+              Positive
+            </div>
+            <div class="row stat-ans">
+              35
+            </div>
+            <div class="row stat-text">
+              Negative
+            </div>
+            <div class="row stat-ans">
+              15
+            </div>
+            <button class=" Mybtn " type="button"> View Responses </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row Mypost-row">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-9 ">
+        <div class="row Mypost-main">
+          <div class="col-lg-5 ">
+            <div class="Mypost-image">
+              <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="Mypost-title">
+              We made it Check the first post ever created !!
+            </div>
+            <div class="Mypost-body">
+              Material is an adaptable system of guidelines, components,
+              and tools that support the best practices of user interface design.
+              Backed by open-source code, Material streamlines collaboration between
+              designers and developers, and helps teams quickly build beautiful products.
+            </div>
+            <div class="row " style="height:17%">
+              <div class="col-lg-2"> </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn" type="button"> Approve </button>
+              </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn " type="button"> Reject </button>
+              </div>
+              <div class="col-lg-2"> </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2"> </div>
+    </div>
+    <div class="row Mypost-row">
+      <div class="col-lg-1"> </div>
+      <div class="col-lg-9 ">
+        <div class="row Mypost-main">
+          <div class="col-lg-5 ">
+            <div class="Mypost-image">
+              <img src="./images/login/login_back.jpg" alt="Italian Trulli">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="Mypost-title">
+              We made it Check the first post ever created !!
+            </div>
+            <div class="Mypost-body">
+              Material is an adaptable system of guidelines, components,
+              and tools that support the best practices of user interface design.
+              Backed by open-source code, Material streamlines collaboration between
+              designers and developers, and helps teams quickly build beautiful products.
+            </div>
+            <div class="row " style="height:17%">
+              <div class="col-lg-2"> </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn" type="button"> Approve </button>
+              </div>
+              <div class="col-lg-4">
+                <button class="options Mybtn " type="button"> Reject </button>
+              </div>
+              <div class="col-lg-2"> </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2"> </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid UserPosts Applications" id="Applications">
+    <div class="row Mypost-row data-value='' ">
+      <div class="row Mypost-submain">
+        <div class="row">
+
+          <div class=" Mypost-body">
+            Material is an adaptable system of guidelines, components,
+            and tools that support the best practices of user interface design.
+            Backed by open-source code, Material streamlines collaboration between
+            designers and developers, and helps teams quickly build beautiful products.
+          </div>
+
+          <div class=" Mypost-body">
+            Material is an adaptable system of guidelines, components,
+            and tools that support the best practices of user interface design.
+            Backed by open-source code, Material streamlines collaboration between
+            designers and developers, and helps teams quickly build beautiful products.
+          </div>
+
+        </div>
+        <div class="row User-Option-row">
+          <button class="Mybtn Accept_btn" type="button" id="Accept"> Accept </button>
+          <button class="Mybtn Reject_btn" type="button" id="Reject"> Reject </button>
+          <button onclick="viewFunction(this)" class="Mybtn View_Post" type="button" id="View_Post" value="small"> View
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="modal fade" id="post-tags" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Select Post Topics (at least 1)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="error"></p>
+          <div class="row justify-content-center">
+            <div class="col-sm-9">
+              <input id="searchbox" class="form-control form-control-sm form-control-borderless" type="search" onkeyup="myFunction()"
+                placeholder="Search topics or keywords">
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-sm btn-success" type="submit">Search</button>
+            </div>
+
+          </div>
+          <!--end of col-->
+          <div class="tags_list">
+            <!-- <label><input type="checkbox" name="type" value="1111" /> fafa </label> -->
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="post-topic-save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <button class = "Mybtn vol-submit" type="button" > Submit </button>          -->
+  <div class="container User_Editor" id="User_Editor">
+    <div class="col-lg-12">
+      <form id="postForm" name="postForm" method="post" enctype="multipart/form-data">
+        <label for="post_info">Title</label>
+        <textarea class="form-control" rows="3" id="post-title" name="post-title"></textarea>
+        <br>
+        <label for="post_info">Article Body</label>
+        <textarea class="form-control" rows="15" id="post-body" name="post-body"></textarea>
+        <br>
+        <label class="file-upload btn btn-outline-success">
+          Browse for file ... <input type="file" id="file-upload" name="file-upload" accept="image/*" />
+        </label>
+        <br>
+        <br>
+        <!--  
+              <button onclick="addPostForm()" type="button" class= "btn btn-primary" id = "SendPost" name = "SendPost"value="Post">Post</button>
+               -->
+
+        <button type="submit" class="Mybtn" id="SendPost" value="Post">Post</button>
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

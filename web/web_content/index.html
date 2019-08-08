@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>InFact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./js/userlogin.js"></script>
+</head> 
+
+<body>
+    <div class="container side-con" style="padding-top:1% ">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="jumbotron text-center side-con form-group">
+                    <h1 style="font-size: 3.5vw">InFact</h1>
+                    <p style="font-size: 1vw; margin-bottom: 7%">A Social Media improved by volunteer-based crowd
+                        sourced fact checking</p>
+                    <div class="container login-con">
+                        <!-- TODO: add the action on checking -->
+                        <!-- <form action="/action_page.php"> -->
+                        <div class="login">
+                            <div class="form-group " style="padding-top: 10%;">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- <div class="col-lg-2"></div> -->
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Email:</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="text" class="input" id="email_l" placeholder="Enter email" name="email">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                        <!-- <div class="col-lg-3"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group " style="padding-top: 3% ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Password:</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="password" class=" input" id="pwd_l" placeholder="Enter password"
+                                                name="pswd">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group " style="padding-bottom: 10%">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-5">
+                                            <button class="Mybtn" id="LoginButton">
+                                                Login
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+
+                    </div>
+
+                    <!--                                 
+                                <div class="container login-con ">
+                                    <form class="row login-form validate-form">
+                                        <div class="wrap-input validate-input m-b-26" data-validate="Username is required">
+                                            <label for="email" class="label-input">Username</label>
+                                            <input type="email" class="form-control input" id="email"  name="username" placeholder="Enter username" type="text">
+                                            <span class="focus-input"></span>
+                                        </div>
+                    
+                                        <div class="row wrap-input validate-input m-b-18" data-validate="Password is required">
+                                            <label class="label-input">Password</label>
+                                            <input class="form-control input" name="pass"id="pwd" placeholder="Enter password" type="password">
+                                            <span class="focus-input"></span>
+                                        </div>                    
+                                        <div class="row container-login-form-btn">
+                                                <button class="login-form-btn">
+                                                    Login
+                                                </button>
+                                            </div>
+                    
+                                        
+                                    </form>
+                                </div> -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="jumbotron text-center side-con">
+                    <h4>Create Account</h4>
+                    <div class="container login-con">
+                        <!-- TODO: add the action on checking -->
+                        <!-- <form > -->
+                            <div class="form-group " style="padding-top: 10%;">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- <div class="col-lg-2"></div> -->
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Name</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="text" class="input" id="name_c" placeholder="Enter Name" name="email">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                        <!-- <div class="col-lg-3"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group " style="padding-top: 1%;">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- <div class="col-lg-2"></div> -->
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Email</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="email" class="input" id="email_c" placeholder="Enter email" name="email">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                        <!-- <div class="col-lg-3"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group " style="padding-top: 3% ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Phone Number</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="number" class=" input" id="phonenumber_c" placeholder="Enter Phone Number"
+                                                name="phonenumber">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group " style="padding-top: 3% ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Password:</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="password" class=" input" id="pwd1_c" placeholder="Enter password"
+                                                name="pswd">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group " style="padding-top: 3% ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3" style="margin: auto">
+                                            <span  class="label-input">Retype-Password</span>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <input type="password" class=" input" id="pwd2_c" placeholder="Enter password"
+                                                name="pswd">
+                                            <span class="focus-input"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group " style="padding-bottom: 10%">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-5">
+                                            <button class="Mybtn" id="CreateAccount">
+                                                Create
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </form> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

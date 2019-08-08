@@ -1,0 +1,17 @@
+﻿drop table responses;
+drop table user_topics;
+drop table rejected_posts;
+drop table application_topics;
+drop table applications;
+drop table volunteer_topics;
+drop table post_topics;
+drop table published_posts;
+drop table pending_posts;
+drop table user_posts;
+drop table user_post_info;
+drop table admin_posts;
+drop table volunteers;
+drop table topics;
+drop table users;
+drop table posts;
+drop table admins;
