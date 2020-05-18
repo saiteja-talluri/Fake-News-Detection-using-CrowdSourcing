@@ -1,1 +1,0 @@
-final urlendpoint = "http://10.196.24.255:8080/Infact/";
